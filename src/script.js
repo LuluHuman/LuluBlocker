@@ -1,3 +1,4 @@
+const container = document.getElementById("test");
 
 test()
 async function test() {
@@ -36,7 +37,7 @@ async function test() {
             var element = showOutput(cf, i, "", "fail")
             fetch(cf[i].url, { mode: 'no-cors' })
                 .catch(async (err) => {
-                    element.innerHTML = element.innerHTML.replace("❌","✅").replace(cf[i].fail,cf[i].pass)
+                    element.innerHTML = element.innerHTML.replace("❌", "✅").replace(cf[i].fail, cf[i].pass)
                 });
             return;
         }
@@ -91,4 +92,8 @@ function showOutput(cf, i, res, status) {
     resElement.appendChild(resElementShow)
     resElement.appendChild(resElementInfo)
     return resElement
+}
+function copy() {
+    navigator.clipboard.writeText("146.190.194.206");
+    alert("Copied")
 }

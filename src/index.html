@@ -6,61 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LuluBlocker - DNS That blocks the blockers</title>
-    <style>
-        body {
-            background-color: #000;
-            color: #fff;
-            font-family: Arial, Helvetica, sans-serif;
-            padding: 0px 10vw;
-        }
-
-        p {
-            font-size: 1.5rem;
-            white-space: pre-line;
-            text-align: left;
-        }
-
-        .buttons {
-            display: flex;
-        }
-
-        .buttons>button {
-            cursor: pointer;
-
-            font-size: 1.5rem;
-            height: 3rem;
-            width: 15rem;
-            margin: 1.5rem;
-
-            text-decoration: none;
-            color: #000;
-
-            background: #fff
-        }
-        
-        .underline{
-            text-decoration: underline;
-            color: #aaa;
-            cursor: pointer;    
-        }
-
-        #test {
-            display: flex;
-            font-size: 1.5rem;
-
-            justify-content: center;
-            align-items: flex-start;
-            flex-direction: column;
-
-
-            white-space: pre-line;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <h3>25/3/2023</h3>
-    <h1>LuluBlocker</h1>
+    <h1>LuluBlocker </br> <a href="https://github.com/LuluHuman/LuluBlocker">Source Code</a></h1>
+    <button onclick="copy()">Copy IP</button>
+    
     <div class="buttons">
         <button onclick="test()">
             Test Connections
@@ -69,7 +22,6 @@
             <a href="http://146.190.194.206:3000" target="_blank">DNS Admin Pannel</a>
         </button>
     </div>
-    <a href="https://github.com/LuluHuman/LuluBlocker">Source Code</a>
     <div id="test">
     </div>
     <script src="./script.js"></script>
