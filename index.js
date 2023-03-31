@@ -19,21 +19,21 @@ app.get("/test", (req, res) => {
 app.get("/test/adguard", (req, res) => {
   exec("systemctl status AdGuardHome.service", (error, stdout, stderr) => {
 
-    // if (error) {
-    //   console.log(`exec error: ${error}`);
-    //   return res.status(500).send(error.message);
-    // }
+    if (error) {
+      console.log(`exec error: ${error}`);
+      return res.status(500).send(error.message);
+    }
 
-    // if (stderr) {
-    //   console.log(`stderr: ${stderr}`);
-    //   return res.status(500).send(stderr);
-    // }
+    if (stderr) {
+      console.log(`stderr: ${stderr}`);
+      return res.status(500).send(stderr);
+    }
 
-    // if (stdout.includes("Active: active (running)")) {
-    //   return res.status(200).send(stdout);
-    // }
+    if (stdout.includes("Active: active (running)")) {
+      return res.status(200).send(stdout);
+    }
 
 
-    res.status(500).send("t")//(stdout);
+    res.status(500).send(stdout);
   });
 })
